@@ -21,19 +21,21 @@
 
         <!-- Right side controls -->
         <div class="header-right">
-          <!-- Location with dropdown arrow -->
           <div class="location">
             Delhi-NCR <i class="fas fa-chevron-down"></i>
           </div>
-
-          <!-- Menu button -->
-
-          <!-- Sign In button -->
           <button class="book-btn">Sign In</button>
-          <button class="menu-btn">
-            <i class="fas fa-bars"></i>
-          </button>
+          <button class="menu-btn"><i class="fas fa-bars"></i></button>
         </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="location">
+          Delhi-NCR <i class="fas fa-chevron-down"></i>
+        </div>
+        <button class="book-btn">Sign In</button>
       </div>
     </header>
 
@@ -327,6 +329,12 @@
     renderArtists();
   });
   renderArtists();
+  const menuBtn = document.querySelector(".menu-btn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+  });
 </script>
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");

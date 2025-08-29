@@ -639,3 +639,122 @@ header .container {
     font-size: 14px;
   }
 }
+.menu-btn {
+  display: none; /* hidden by default (desktop) */
+}
+
+/* Navigation Wrapper (for future links if needed) */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .header-right {
+    gap: 10px;
+  }
+
+  .menu-btn {
+    display: block; /* show hamburger */
+  }
+
+  /* Hide location + sign-in on mobile initially */
+  .location,
+  .book-btn {
+    display: none;
+  }
+
+  /* Mobile menu panel */
+  .mobile-menu {
+    position: fixed;
+    top: 70px; /* just below header */
+    right: 0;
+    width: 220px;
+    background: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+
+  .mobile-menu a,
+  .mobile-menu button,
+  .mobile-menu .location {
+    text-align: left;
+    font-size: 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 8px 0;
+  }
+
+  .mobile-menu .book-btn {
+    background: #e63946;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+  }
+}
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Hide desktop header items on mobile */
+  .header-right .location,
+  .header-right .book-btn {
+    display: none;
+  }
+
+  /* Show hamburger menu button */
+  .menu-btn {
+    display: block;
+  }
+
+  /* Mobile menu styling */
+  .mobile-menu {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    background: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+    display: none; /* Hidden by default */
+    z-index: 999;
+  }
+
+  .mobile-menu.active {
+    display: flex; /* Show when active */
+  }
+
+  .mobile-menu .location,
+  .mobile-menu .book-btn {
+    display: block; /* Ensure both are visible */
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 0;
+  }
+
+  .mobile-menu .book-btn {
+    background: #e63946;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    width: fit-content;
+  }
+
+  .mobile-menu .book-btn:hover {
+    background: #d32f3b; /* Slightly darker hover effect */
+  }
+}
