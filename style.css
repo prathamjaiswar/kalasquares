@@ -722,7 +722,7 @@ header .container {
     position: fixed;
     top: 70px;
     right: 0;
-    width: 220px;
+    width: auto;
     background: #fff;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
