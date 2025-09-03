@@ -1,357 +1,698 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <title>KalaSquare</title>
-</head>
+    <title>KalaSquare</title>
+  </head>
 
-<body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <!-- Left Logo -->
-      <div class="logo">
-        <img src="assets/logo.jpg" alt="KalaSquare Logo" />
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <!-- Left Logo -->
+        <div class="logo">
+          <img src="assets/logo.jpg" alt="KalaSquare Logo" />
+        </div>
+
+        <!-- Right side controls -->
+        <div class="header-right">
+          <div class="search-box">
+            <input type="text" placeholder="Search for 1500 celebs" />
+         <i class="fas fa-search"></i>
+          </div>
+          <button class="book-btn">Promote Your Business</button>
+          <a class="">Login/Sign In</a>
+
+          <button class="menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
       </div>
 
-      <!-- Right side controls -->
-      <div class="header-right">
+      <!-- Mobile Menu -->
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
         <div class="location">
           Delhi-NCR <i class="fas fa-chevron-down"></i>
         </div>
         <button class="book-btn">Sign In</button>
-        <button class="menu-btn"><i class="fas fa-bars"></i></button>
+        <button class="book-btn">Promote Your Business</button>
       </div>
-    </div>
+    </header>
 
-    <!-- Mobile Menu -->
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-      <div class="location">
-        Delhi-NCR <i class="fas fa-chevron-down"></i>
+    <section class="hero">
+      <div
+        style="
+          background-color: #e63946;
+          color: #ffffff;
+          padding: 10px;
+          text-align: center;
+          font-size: 16px;
+        "
+      >
+        Get Celebrities & Influencers To Promote Your Business -
+        <span
+          style="
+            background-color: #ffffff;
+            color: #e63946;
+            padding: 5px 10px;
+            border-radius: 5px;
+          "
+          >Tap Here to Begin !</span
+        >
       </div>
-      <button class="book-btn">Sign In</button>
-    </div>
-  </header>
+      <br />
+      <div class="hero-content">
+        <!-- Left Content -->
+        <div class="text-section">
+          <h2>
+            “Top artists, zero hassle – <br />
+            Book Your Artist with
+            <br />
+            <span class="highlight">KalaSquare!</span>”
+          </h2>
+          <ul class="features">
+            <li>10k+ Verified Artists – Top performers for every occasion.</li>
+            <li>
+              Hassle-Free Booking – Book your favorite artist in just a few
+              clicks.
+            </li>
+            <li>
+              Customizable Packages – Performances tailored to your event &
+              budget.
+            </li>
+            <li>
+              Instant Availability – See schedules & confirm artists instantly.
+            </li>
+            <li>
+              Verified Reviews & Ratings – Book confidently with real feedback.
+            </li>
+          </ul>
+          <button
+            style="
+              background-color: #e63946;
+              color: #ffffff;
+              padding: 10px 20px;
+              border-radius: 20px;
+              border: none;
+              font-size: 16px;
+              cursor: pointer;
+              margin-top: 12px;
+            "
+          >
+            Talk To Us Now →
+          </button>
+        </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <!-- Left Content -->
-      <div class="text-section">
-        <h2>
-          “Top artists, zero hassle – <br />
-          Book, manage, and grow with
-          <br />
-          <span class="highlight">KalaSquare!</span>”
-        </h2>
+        <!-- Right Side: Artist Cards -->
+        <div class="artist-cards">
+          <div class="artist-card">
+            <!-- <img src="images/bobby.jpg" alt="Bobby Deol" /> -->
+            <img src="assets/sample.png" alt="Visual" />
+
+            <h4>dummy data</h4>
+            <p>dummy data</p>
+          </div>
+          <div class="artist-card">
+            <!-- <img src="images/bobby.jpg" alt="Bobby Deol" /> -->
+            <img src="assets/sample.png" alt="Visual" />
+
+            <h4>dummy data</h4>
+            <p>dummy data</p>
+          </div>
+          <div class="artist-card">
+            <!-- <img src="images/bobby.jpg" alt="dummy data" /> -->
+            <img src="assets/sample.png" alt="Visual" />
+
+            <h4>dummy data</h4>
+            <p>dummy data</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="brands-about-section">
+      <div class="brands-section">
+        <h3
+          style="
+            background-color: #e63946;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
+          "
+        >
+          Brands We Have Worked With
+        </h3>
+        <div class="brands-logos">
+          <div class="logo-slider">
+            <img src="assets\brand1.png" alt="SUNOVA" style="margin: 10px" />
+            <img src="assets/brand2.png" alt="greencure" style="margin: 10px" />
+            <img src="assets/brand3.png" alt="Relevel" style="margin: 10px" />
+            <img src="assets/brand4.png" alt="eka.care" style="margin: 10px" />
+            <img src="assets/brand5.png" alt="gamezy" style="margin: 10px" />
+            <img src="assets/brand6.png" alt="Fitelo" style="margin: 10px" />
+            <img
+              src="assets/brand7.png"
+              alt="Baidyanath"
+              style="margin: 10px"
+            />
+            <img src="assets/brand8.png" alt="KUKUFM" style="margin: 10px" />
+            <!-- Duplicate logos for seamless looping -->
+            <img src="assets\brand1.png" alt="SUNOVA" style="margin: 10px" />
+            <img src="assets/brand2.png" alt="greencure" style="margin: 10px" />
+            <img src="assets/brand3.png" alt="Relevel" style="margin: 10px" />
+            <img src="assets/brand4.png" alt="eka.care" style="margin: 10px" />
+            <img src="assets/brand5.png" alt="gamezy" style="margin: 10px" />
+            <img src="assets/brand6.png" alt="Fitelo" style="margin: 10px" />
+            <img
+              src="assets/brand7.png"
+              alt="Baidyanath"
+              style="margin: 10px"
+            />
+            <img src="assets/brand8.png" alt="KUKUFM" style="margin: 10px" />
+          </div>
+        </div>
+      </div>
+
+      <!-- About KalaSquare -->
+      <div class="about-section">
+        <h3
+          style="
+            background-color: #e63946;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
+          "
+        >
+          About KalaSquare
+        </h3>
+        <p>
+          KalaSquare connects you with 10,000+ verified artists across music,
+          dance, comedy, and more. Booking your favorite talent is fast, easy,
+          and hassle-free with customizable packages and instant availability.
+          Real reviews help you book confidently, making every event—corporate,
+          wedding, or private party—truly unforgettable. With KalaSquare, it's
+          all about top artists, zero hassle.
+        </p>
+      </div>
+    </section>
+    <!-- <section class="brand-section">
+      <div class="slider-card">
+        <div class="slider">
+          <div class="slider-track">
+            <div class="slide">
+              <div class="slide-content">
+                <p class="slide-text">
+                  More than <strong>1000+ big brands</strong> trust
+                  <span>KalaSquare</span>
+                </p>
+                <img
+                  src="assets/logo.jpg"
+                  alt="Brand logo"
+                  class="slide-logo"
+                />
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="slide-content">
+                <p class="slide-text">
+                  More than <strong>1000+ big brands</strong> trust
+                  <span>KalaSquare</span>
+                </p>
+                <img
+                  src="assets/logo.jpg"
+                  alt="Brand logo"
+                  class="slide-logo"
+                />
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-content">
+                <p class="slide-text">
+                  More than <strong>1000+ big brands</strong> trust
+                  <span>KalaSquare</span>
+                </p>
+                <img
+                  src="assets/logo.jpg"
+                  alt="Brand logo"
+                  class="slide-logo"
+                />
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-content">
+                <p class="slide-text">
+                  More than <strong>1000+ big brands</strong> trust
+                  <span>KalaSquare</span>
+                </p>
+                <img
+                  src="assets/logo.jpg"
+                  alt="Brand logo"
+                  class="slide-logo"
+                />
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-content">
+                <p class="slide-text">
+                  More than <strong>1000+ big brands</strong> trust
+                  <span>KalaSquare</span>
+                </p>
+                <img
+                  src="assets/logo.jpg"
+                  alt="Brand logo"
+                  class="slide-logo"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tagline-section">
+        <h3 class="tagline-title">
+          <span>Why Creators Choose</span>
+          <span class="highlight">KalaSquare 🚀</span>
+        </h3>
         <ul class="features">
           <li>
-            🎤 Exclusive Talent Access – Top artists for every event &
-            campaign.
+            At <strong>KalaSquare</strong>, we don’t just manage talent — we
+            nurture it.
           </li>
           <li>
-            📅 Seamless Booking – Hassle-free scheduling & confirmations.
+            <strong>100% Transparency</strong> – Real-time access to campaigns,
+            deals, and earnings.
           </li>
           <li>
-            🚀 Profile Growth – Build & manage artist profiles like a pro.
+            <strong>Bigger Opportunities</strong> – Collaborate with top brands
+            and projects tailored to your niche.
           </li>
           <li>
-            ✅ Transparent Deals – Clear contracts, payments & legal coverage.
+            <strong>Personal Growth</strong> – Guidance, strategy, and support
+            to build your unique creator journey.
+          </li>
+          <li>
+            <strong>Stronger Community</strong> – Be part of a thriving network
+            of influencers, artists, and brands.
           </li>
         </ul>
       </div>
+    </section> -->
 
-      <!-- Right Form -->
-      <div class="form-section">
-        <h3>Be The Creator!</h3>
-        <form>
-          <input type="text" placeholder="Your name*" required />
-          <input type="text" placeholder="Your company name*" required />
-          <input type="tel" placeholder="+91 Mobile number*" required />
-          <input type="email" placeholder="Your email*" required />
-          <select required>
-              <option value="">Budget (in INR)*</option>
-              <option>0 - 1 Lakh</option>
-              <option>1 - 3 lakh</option>
-              <option>3 - 5lakh</option>
-              <option>5 - 10lakh</option>
+    <section class="talent-section">
+      <div class="talent-wrapper">
+        <!-- Left Card -->
+        <div class="talent-card-box">
+          <div class="talent-card">
+            <img src="assets/Group-1171277241.png" alt="Visual" />
+          </div>
+        </div>
 
-            </select>
-          <button type="submit" style="color: #e63946;">Submit</button>
+        <!-- Right Content -->
+        <div class="talent-info">
+          <h2 class="talent-title">
+            Transparent Email ID — You See Every Deal
+          </h2>
+          <p class="talent-subtext">
+            Every creator we manage gets a dedicated email ID
+            (yourname@kalakaaar.com).
+          </p>
+
+          <div class="talent-divider"></div>
+          <p class="talent-text">
+            See every conversation with brands — from first pitch to final deal.
+          </p>
+
+          <div class="talent-divider"></div>
+          <p class="talent-text">
+            Know exactly how much is quoted, what brands are asking, and how
+            we’re negotiating for you.
+          </p>
+
+          <div class="talent-divider"></div>
+          <p class="talent-text">
+            No more ‘secret deals’ — you’re part of every conversation.
+          </p>
+        </div>
+      </div>
+      <div class="talent-wrapper">
+        <!-- Left Content -->
+        <div class="talent-info">
+          <h2 class="talent-title">
+            Creator Dashboard — Your Career, Fully Visible
+          </h2>
+          <p class="talent-subtext">
+            With our exclusive dashboard, you get a real-time view of everything
+            happening in your brand collab journey.
+          </p>
+
+          <div class="talent-divider"></div>
+          <p class="talent-text">
+            See all active, closed, and in-progress deals.
+          </p>
+
+          <div class="talent-divider"></div>
+          <p class="talent-text">
+            Track payments, invoices, and deal status anytime.
+          </p>
+
+          <div class="talent-divider"></div>
+          <p class="talent-text">
+            Monitor response times and how fast brands are moving on your
+            collab.
+          </p>
+        </div>
+
+        <!-- Right Card -->
+        <div class="talent-card-box">
+          <div class="talent-card1">
+            <img src="assets/Group-1171277241-1.png" alt="Visual" />
+          </div>
+        </div>
+      </div>
+      <div class="talent-wrapper">
+        <!-- Left Card -->
+        <div class="talent-card-box">
+          <div class="talent-card" style="background-color: #ffcc00">
+            <img src="assets/Group-1171277244.png" alt="Visual" />
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="talent-info">
+          <h2 class="talent-title">
+            Backed by Confluencr — 700+ Brand Network You Can Access
+          </h2>
+          <p class="talent-subtext">
+            Kalakaaar is powered by Confluencr, one of India’s largest
+            influencer marketing agencies.
+          </p>
+
+          <div class="talent-divider"></div>
+          <p class="talent-text">
+            Get access to over 700+ brands already working with us.
+          </p>
+
+          <div class="talent-divider"></div>
+          <p class="talent-text">
+            Be part of our outbound pitching campaigns, brand email marketing,
+            and PR pushes.
+          </p>
+
+          <div class="talent-divider"></div>
+          <p class="talent-text">
+            Tap into consistent, high-quality brand opportunities from day one.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="kalakaar-section">
+      <div class="kalakaar-grid">
+        <div class="kalakaar-box">
+          <div class="kalakaar-card">
+            <img src="assets/151.png" alt="Riaa Bally" />
+            <div class="kalakaar-overlay">
+              <h3 class="kalakaar-name">Riaa Bally</h3>
+              <p class="kalakaar-location">Mumbai, Maharashtra, India</p>
+              <p class="kalakaar-role">Singer | Writer</p>
+              <button class="talk-btn">Talk To Us</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="kalakaar-box">
+          <div class="kalakaar-card">
+            <img src="assets/151.png" alt="Riaa Bally" />
+            <div class="kalakaar-overlay">
+              <h3 class="kalakaar-name">Riaa Bally</h3>
+              <p class="kalakaar-location">Mumbai, Maharashtra, India</p>
+              <p class="kalakaar-role">Singer | Writer</p>
+              <button class="talk-btn">Talk To Us</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="kalakaar-box">
+          <div class="kalakaar-card">
+            <img src="assets/151.png" alt="Riaa Bally" />
+            <div class="kalakaar-overlay">
+              <h3 class="kalakaar-name">Riaa Bally</h3>
+              <p class="kalakaar-location">Mumbai, Maharashtra, India</p>
+              <p class="kalakaar-role">Singer | Writer</p>
+              <button class="talk-btn">Talk To Us</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="kalakaar-box">
+          <div class="kalakaar-card">
+            <img src="assets/151.png" alt="Riaa Bally" />
+            <div class="kalakaar-overlay">
+              <h3 class="kalakaar-name">Riaa Bally</h3>
+              <p class="kalakaar-location">Mumbai, Maharashtra, India</p>
+              <p class="kalakaar-role">Singer | Writer</p>
+              <button class="talk-btn">Talk To Us</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5-8: hidden initially via class "extra" -->
+        <div class="kalakaar-box extra">
+          <div class="kalakaar-card">
+            <img src="assets/151.png" alt="Riaa Bally" />
+            <div class="kalakaar-overlay">
+              <h3 class="kalakaar-name">Riaa Bally</h3>
+              <p class="kalakaar-location">Mumbai, Maharashtra, India</p>
+              <p class="kalakaar-role">Singer | Writer</p>
+              <button class="talk-btn">Talk To Us</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="kalakaar-box extra">
+          <div class="kalakaar-card">
+            <img src="assets/151.png" alt="Riaa Bally" />
+            <div class="kalakaar-overlay">
+              <h3 class="kalakaar-name">Riaa Bally</h3>
+              <p class="kalakaar-location">Mumbai, Maharashtra, India</p>
+              <p class="kalakaar-role">Singer | Writer</p>
+              <button class="talk-btn">Talk To Us</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="kalakaar-box extra">
+          <div class="kalakaar-card">
+            <img src="assets/151.png" alt="Riaa Bally" />
+            <div class="kalakaar-overlay">
+              <h3 class="kalakaar-name">Riaa Bally</h3>
+              <p class="kalakaar-location">Mumbai, Maharashtra, India</p>
+              <p class="kalakaar-role">Singer | Writer</p>
+              <button class="talk-btn">Talk To Us</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="kalakaar-box extra">
+          <div class="kalakaar-card">
+            <img src="assets/151.png" alt="Riaa Bally" />
+            <div class="kalakaar-overlay">
+              <h3 class="kalakaar-name">Riaa Bally</h3>
+              <p class="kalakaar-location">Mumbai, Maharashtra, India</p>
+              <p class="kalakaar-role">Singer | Writer</p>
+              <button class="talk-btn">Talk To Us</button>
+            </div>
+          </div>
+        </div>
+        <!-- 
+        <div class="view-more-wrapper">
+          <a id="view-more" class="view-more-link">View More</a>
+        </div> -->
+      </div>
+    </section>
+    <section class="featured-section">
+      <div class="featured-container">
+        <p style="font-weight: 600; color: black">Featured in:</p>
+        <img src="assets\news1.png" alt="SUNOVA" style="margin: 10px" />
+        <img src="assets\news2.png" alt="SUNOVA" style="margin: 10px" />
+        <img src="assets\news3.png" alt="SUNOVA" style="margin: 10px" />
+        <img src="assets\news4.png" alt="SUNOVA" style="margin: 10px" />
+        <a href="#" class="view-more">View More</a>
+      </div>
+    </section>
+    <section class="contact-section">
+      <div class="contact-container">
+        <!-- Left Form -->
+
+        <form class="contact-form" action="contact.php" method="POST">
+          <h2>GET IN TOUCH</h2>
+          <input type="text" placeholder="Your Name" />
+          <input type="email" placeholder="Your Email" />
+          <input type="text" placeholder="Your Phone" />
+
+          <label>Are you representing <span style="color: red">*</span></label>
+          <select>
+            <option>Please select one</option>
+            <option>Influencer</option>
+            <option>Brand</option>
+          </select>
+
+          <button type="submit" class="btn">Submit</button>
         </form>
-      </div>
-    </div>
-  </section>
 
-  <section class="brand-section">
-<div class="slider-card">
-  <div class="slider">
-    <div class="slider-track">
-      <div class="slide">
-        <div class="slide-content">
-          <p class="slide-text">
-            More than <strong>1000+ big brands</strong> trust <span>KalaSquare</span>
+        <!-- Right Content -->
+        <div class="contact-content">
+          <h1>
+            KalaSquare <br />
+            <span>– Connecting Talent with Opportunity!</span>
+          </h1>
+          <p>
+            At KalaSquare, we believe in empowering artists, influencers, and
+            brands by creating meaningful collaborations. Whether you’re a
+            rising talent looking for representation or a brand seeking the
+            perfect influencer partnership, KalaSquare is your gateway to growth
+            and success.
           </p>
-          <img src="assets/logo.jpg" alt="Brand logo" class="slide-logo" />
         </div>
       </div>
+    </section>
 
-      <!-- Duplicate slides for smooth scrolling -->
-      <div class="slide">
-        <div class="slide-content">
-          <p class="slide-text">
-            More than <strong>1000+ big brands</strong> trust <span>KalaSquare</span>
-          </p>
-          <img src="assets/logo.jpg" alt="Brand logo" class="slide-logo" />
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Section: Information -->
+        <div class="footer-info">
+          <h3>Information</h3>
+          <ul>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>List Your Show</li>
+            <li>Explore Projects</li>
+            <li>Register as Brand</li>
+            <li>Career</li>
+            <li>Explore Events</li>
+            <li>Awards Shows</li>
+            <li>Talent Agencies</li>
+          </ul>
+        </div>
+
+        <!-- Center Section: Useful Links -->
+        <div class="footer-links">
+          <h3>Useful Links</h3>
+          <ul>
+            <li><a href="#">Terms & Condition</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Advertise With Us</a></li>
+            <li><a href="#">Membership</a></li>
+            <li><a href="#">Platinum Artist</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Exclusive Artist</a></li>
+            <li><a href="#">Venues & Clubs</a></li>
+          </ul>
+        </div>
+
+        <!-- Center Section: Artist Testimonials -->
+        <div class="footer-testimonials">
+          <h3>Artist Testimonials</h3>
+          <ul>
+            <li>Top Creators</li>
+            <li>Trending Influencers</li>
+            <li>Top Influencers in India</li>
+            <li>Music Studios</li>
+            <li>Meody Square</li>
+          </ul>
+        </div>
+
+        <!-- Right Section: Follow Us On -->
+        <div class="footer-social">
+          <h3>Follow Us On</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
         </div>
       </div>
-        <div class="slide">
-        <div class="slide-content">
-          <p class="slide-text">
-            More than <strong>1000+ big brands</strong> trust <span>KalaSquare</span>
-          </p>
-          <img src="assets/logo.jpg" alt="Brand logo" class="slide-logo" />
-        </div>
+    </footer>
+
+    <!-- <section class="contact-section">
+      <div class="contact-form">
+        <h2>GET IN TOUCH</h2>
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Your Email" />
+        <input type="text" placeholder="Your Phone" />
+
+        <label>Are you representing <span style="color: red">*</span></label>
+        <select>
+          <option>Please select one</option>
+          <option>Influencer</option>
+          <option>Brand</option>
+        </select>
+
+        <button class="btn">Next</button>
       </div>
-        <div class="slide">
-        <div class="slide-content">
-          <p class="slide-text">
-            More than <strong>1000+ big brands</strong> trust <span>KalaSquare</span>
-          </p>
-          <img src="assets/logo.jpg" alt="Brand logo" class="slide-logo" />
-        </div>
-      </div>
-        <div class="slide">
-        <div class="slide-content">
-          <p class="slide-text">
-            More than <strong>1000+ big brands</strong> trust <span>KalaSquare</span>
-          </p>
-          <img src="assets/logo.jpg" alt="Brand logo" class="slide-logo" />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="tagline-section">
-  <h3 class="tagline-title">
-    <span>Why Creators Choose</span>
-    <span class="highlight">KalaSquare 🚀</span>
-  </h3>
-  <ul class="features">
-    <li>At <strong>KalaSquare</strong>, we don’t just manage talent — we nurture it.</li>
-    <li><strong>100% Transparency</strong> – Real-time access to campaigns, deals, and earnings.</li>
-    <li><strong>Bigger Opportunities</strong> – Collaborate with top brands and projects tailored to your niche.</li>
-    <li><strong>Personal Growth</strong> – Guidance, strategy, and support to build your unique creator journey.</li>
-    <li><strong>Stronger Community</strong> – Be part of a thriving network of influencers, artists, and brands.</li>
-  </ul>
-</div>
+      <div class="contact-content">
+        <h1>
+          KalaSquare <br /><span> – Connecting Talent with Opportunity!</span>
+        </h1>
 
-</section>
-
-  <section class="talent-section">
-    <div class="talent-wrapper">
-      <!-- Left Card -->
-      <div class="talent-card-box">
-        <div class="talent-card">
-          <img src="assets/Group-1171277241.png" alt="Visual" />
-        </div>
-      </div>
-
-      <!-- Right Content -->
-      <div class="talent-info">
-        <h2 class="talent-title">
-          Transparent Email ID — You See Every Deal
-        </h2>
-        <p class="talent-subtext">
-          Every creator we manage gets a dedicated email ID
-          (yourname@kalakaaar.com).
-        </p>
-
-        <div class="talent-divider"></div>
-        <p class="talent-text">
-          See every conversation with brands — from first pitch to final deal.
-        </p>
-
-        <div class="talent-divider"></div>
-        <p class="talent-text">
-          Know exactly how much is quoted, what brands are asking, and how
-          we’re negotiating for you.
-        </p>
-
-        <div class="talent-divider"></div>
-        <p class="talent-text">
-          No more ‘secret deals’ — you’re part of every conversation.
+        <p>
+          At KalaSquare, we believe in empowering artists, influencers, and
+          brands by creating meaningful collaborations. Whether you’re a rising
+          talent looking for representation or a brand seeking the perfect
+          influencer partnership, KalaSquare is your gateway to
+          growth and success.
         </p>
       </div>
-    </div>
-    <div class="talent-wrapper">
-      <!-- Left Content -->
-      <div class="talent-info">
-        <h2 class="talent-title">
-          Creator Dashboard — Your Career, Fully Visible
-        </h2>
-        <p class="talent-subtext">
-          With our exclusive dashboard, you get a real-time view of everything
-          happening in your brand collab journey.
-        </p>
-
-        <div class="talent-divider"></div>
-        <p class="talent-text">
-          See all active, closed, and in-progress deals.
-        </p>
-
-        <div class="talent-divider"></div>
-        <p class="talent-text">
-          Track payments, invoices, and deal status anytime.
-        </p>
-
-        <div class="talent-divider"></div>
-        <p class="talent-text">
-          Monitor response times and how fast brands are moving on your
-          collab.
-        </p>
-      </div>
-
-      <!-- Right Card -->
-      <div class="talent-card-box">
-        <div class="talent-card1">
-          <img src="assets/Group-1171277241-1.png" alt="Visual" />
-        </div>
-      </div>
-    </div>
-    <div class="talent-wrapper">
-      <!-- Left Card -->
-      <div class="talent-card-box">
-        <div class="talent-card" style="background-color: #ffcc00">
-          <img src="assets/Group-1171277244.png" alt="Visual" />
-        </div>
-      </div>
-
-      <!-- Right Content -->
-      <div class="talent-info">
-        <h2 class="talent-title">
-          Backed by Confluencr — 700+ Brand Network You Can Access
-        </h2>
-        <p class="talent-subtext">
-          Kalakaaar is powered by Confluencr, one of India’s largest
-          influencer marketing agencies.
-        </p>
-
-        <div class="talent-divider"></div>
-        <p class="talent-text">
-          Get access to over 700+ brands already working with us.
-        </p>
-
-        <div class="talent-divider"></div>
-        <p class="talent-text">
-          Be part of our outbound pitching campaigns, brand email marketing,
-          and PR pushes.
-        </p>
-
-        <div class="talent-divider"></div>
-        <p class="talent-text">
-          Tap into consistent, high-quality brand opportunities from day one.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="kalakaar-section">
-    <h2 class="kalakaar-title">Our <span>Kalakaaars</span></h2>
-    <div class="kalakaar-grid" id="kalakaarGrid">
-      <!-- Artists will be injected here -->
-    </div>
-
-    <div class="kalakaar-btn-wrapper">
-      <button class="kalakaar-btn" id="viewMoreBtn">View more</button>
-    </div>
-  </section>
-
-  <section class="contact-section">
-    <div class="contact-form">
-      <h2>GET IN TOUCH</h2>
-      <input type="text" placeholder="Your Name" />
-      <input type="email" placeholder="Your Email" />
-      <input type="text" placeholder="Your Phone" />
-
-      <label>Are you representing <span style="color: red">*</span></label>
-      <select>
-        <option>Please select one</option>
-        <option>Influencer</option>
-        <option>Brand</option>
-      </select>
-
-      <button class="btn">Next</button>
-    </div>
-    <div class="contact-content">
-      <h1>
-        KalaSquare <br /><span> – Connecting Talent with Opportunity!</span>
-      </h1>
-
-      <p>
-        At KalaSquare, we believe in empowering artists, influencers, and
-        brands by creating meaningful collaborations. Whether you’re a rising
-        talent looking for representation or a brand seeking the perfect
-        influencer partnership, KalaSquare is your gateway to
-        growth and success.
-      </p>
-    </div>
-  </section>
-</body>
-
+    </section> -->
+  </body>
 </html>
 <script>
-  const artists = [
-    { name: "Karen Vincent", role: "Entertainer", img: "assets/151.png" },
-    { name: "Dr Vijender Singh", role: "Professor", img: "assets/146-1.png" },
-    { name: "Shahrukh Khan", role: "Entertainer", img: "assets/147.png" },
-    { name: "Vaibhavi Jagdish", role: "Actor", img: "assets/160.png" },
-    { name: "Vishnu V", role: "Content Creator", img: "assets/207.png" },
-    { name: "Sanjana Burli", role: "Singer", img: "assets/208.png" },
-  ];
+  document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("viewMoreBtn");
+    if (!btn) return;
 
-  const kalakaarGrid = document.getElementById("kalakaarGrid");
-  const viewMoreBtn = document.getElementById("viewMoreBtn");
+    // get nodeList of elements that we marked as "extra" initially
+    const extras = document.querySelectorAll(".kalakaar-box.extra");
 
-  let visibleCount = 4; // show first 4
-
-  function renderArtists() {
-    kalakaarGrid.innerHTML = "";
-    artists.slice(0, visibleCount).forEach((artist) => {
-      kalakaarGrid.innerHTML += `
-      <div class="kalakaar-box">
-        <div class="kalakaar-img">
-          <img src="${artist.img}" alt="${artist.name}" />
-        </div>
-        <h3 class="kalakaar-name">${artist.name}</h3>
-        <p class="kalakaar-role">${artist.role}</p>
-      </div>
-    `;
-    });
-
-    // hide button if no more artists
-    if (visibleCount >= artists.length) {
-      viewMoreBtn.style.display = "none";
+    // hide button if no extras exist
+    if (extras.length === 0) {
+      btn.style.display = "none";
+      return;
     }
-  }
 
-  viewMoreBtn.addEventListener("click", () => {
-    visibleCount += 4; // load 4 more
-    renderArtists();
-  });
-  renderArtists();
-  const menuBtn = document.querySelector(".menu-btn");
-  const mobileMenu = document.getElementById("mobileMenu");
+    btn.addEventListener("click", function (e) {
+      const expanded = btn.getAttribute("aria-expanded") === "true";
 
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("active");
+      // toggle: if currently expanded = true => collapse (add back class extra),
+      // otherwise remove 'extra' class to show them.
+      extras.forEach((el) => {
+        if (expanded) {
+          el.classList.add("extra"); // collapse: hide again
+        } else {
+          el.classList.remove("extra"); // expand: show
+        }
+      });
+
+      btn.textContent = expanded ? "View More" : "View Less";
+      btn.setAttribute("aria-expanded", (!expanded).toString());
+    });
   });
 </script>
+
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 </style>
