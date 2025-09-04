@@ -194,30 +194,7 @@ header .container {
   /* padding: 0; */
 }
 
-/* .features li {
-  font-size: 16px;
-  margin-bottom: 6px;
-  position: relative;
-  padding-left: 30px;
-} */
 
-/* .features li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #e63946;
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 
 .artist-cards {
   overflow: hidden;
@@ -233,43 +210,6 @@ header .container {
   animation: slide 18s linear infinite;
 }
 
-/* .artist-card {
-  flex: 0 0 250px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 15px;
-} */
-
-/* .artist-card img {
-  width: 100%;
-    height: 331px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.artist-card h4 {
-  margin: 10px 0 5px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.artist-card p {
-  font-size: 14px;
-  color: #666;
-} */
-
-/* @keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  } */
-/* } */
-
-/* Brands and About Section */
 .brands-about-section {
   text-align: center;
 }
