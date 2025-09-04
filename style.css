@@ -1,4 +1,3 @@
-/* Import Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@400;600;700&display=swap");
 
 * {
@@ -17,7 +16,6 @@ body {
 /* Header */
 header {
   background: #fff;
-  /* padding: 15px 0; */
   border-bottom: 1px solid #ddd;
   position: fixed;
   top: 0;
@@ -31,19 +29,22 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
-  padding: 0 20px;
+  height: 55px;
 }
 
 .logo img {
-  height: 50px;
+  height: 31px;
+  margin-top: 5px;
 }
 
 .header-right {
   display: flex;
   align-items: center;
   gap: 15px;
+  justify-content: flex-end;
+  margin-left: auto;
 }
 
 .search-box {
@@ -149,24 +150,16 @@ header .container {
   margin-top: 12px;
 }
 
-/* .hero-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: auto;
-  gap: 30px;
-  flex-wrap: wrap;
-} */
 .hero-content {
   display: flex;
-  justify-content: center; /* Center the content as per the image */
-  align-items: flex-start; /* Align items at the top */
+  justify-content: center;
+  align-items: flex-start;
   max-width: 1200px;
   margin: auto;
   gap: 30px;
   flex-wrap: wrap;
 }
+
 .text-section {
   flex: 1;
   min-width: 300px;
@@ -174,23 +167,19 @@ header .container {
 }
 
 .text-section h2 {
-  /* font-size: 2rem;
-  font-weight: 700;
-  /* margin-bottom: 20px; */
-  /* line-height: 1.3; */ 
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.3;
   margin-left: 30px;
 }
+
 .quote-left {
   position: absolute;
   left: 0;
   top: 0;
   font-size: 40px;
-  /* color: #e63946; */
   font-weight: bold;
-  line-height: 1; /* Ensure the quote doesn't affect vertical alignment */
+  line-height: 1;
 }
 
 .highlight {
@@ -203,15 +192,10 @@ header .container {
 }
 
 .features li {
-  /* font-size: 1.1rem;
-  margin-bottom: 12px;
-  position: relative;
-  padding-left: 30px; */
-  font-size: 15px;
-  margin-bottom: 4px;
+  font-size: 16px;
+  margin-bottom: 6px;
   position: relative;
   padding-left: 30px;
-  font-weight: 900;
 }
 
 .features li::before {
@@ -233,33 +217,39 @@ header .container {
 }
 
 .artist-cards {
-  flex: 1;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 375px;
+}
+
+.artist-slider {
   display: flex;
-  gap: 15px;
-  justify-content: center;
-  height: 300px;
+  gap: 20px;
+  animation: slide 18s linear infinite;
 }
 
 .artist-card {
+  flex: 0 0 250px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 10px;
-  flex: 1;
-  max-width: 200px;
+  padding: 15px;
 }
 
 .artist-card img {
   width: 100%;
-  border-radius: 10px;
-  height: 230px;
+  height: 260px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .artist-card h4 {
   margin: 10px 0 5px;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .artist-card p {
@@ -267,9 +257,17 @@ header .container {
   color: #666;
 }
 
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Brands and About Section */
 .brands-about-section {
-  /* padding: 40px 20px; */
   text-align: center;
 }
 
@@ -289,67 +287,10 @@ header .container {
   padding: 6px 0;
 }
 
-/* .logo-slider {
-  display: inline-block;
-  animation: slide 20s linear infinite;
-}
-
-.logo-slider img {
+.brands-swiper .swiper-slide img {
   height: 60px;
   margin: 0 20px;
-  vertical-align: middle;
-} */
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
 }
-@keyframes slide-reverse {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.reverse-slider .logo-slider.reverse {
-  animation: slide-reverse 160s linear infinite; /* Slower speed, right to left */
-}
-
-.logo-slider {
-  display: inline-block;
-  animation: slide 160s linear infinite; /* Increased from 20s to 60s for slower speed */
-}
-/* .quote-left {
-  position: relative;
-  left: -10px; 
-} */
-/* .quote-left {
-  position: absolute;
-  left: 0; 
-  top: 0; 
-  transform: translateX(-100%); 
-  font-size: 40px;
-  color: #e63946;
-  font-weight: bold;
-} */
-.logo-slider img {
-  height: 60px;
-  margin: 0 20px;
-  vertical-align: middle;
-}
-/* @keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-} */
 
 .about-section p {
   font-size: 16px;
@@ -361,7 +302,6 @@ header .container {
 
 /* Talent Section */
 .talent-section {
-  /* padding: 40px 20px; */
 }
 
 .talent-wrapper {
@@ -370,7 +310,7 @@ header .container {
   justify-content: space-between;
   gap: 30px;
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 42px auto;
   flex-wrap: wrap;
 }
 
@@ -431,13 +371,15 @@ header .container {
 
 /* Kalakaar Section */
 .kalakaar-section {
-  /* padding: 40px 20px; */
 }
+
 .kalakaar-header {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px; /* Optional: adds spacing below the button */
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
+
 .kalakaar-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -521,59 +463,34 @@ header .container {
   height: 40px;
   margin: 0 10px;
 }
-.creator-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  position: relative;
-}
 
 .view-more-wrapper {
   width: 100%;
   text-align: right;
   margin-top: 20px;
-      padding-right: 166px;
-
-   /* padding-right: 10px;  */
+  padding-right: 166px;
 }
 
 .view-more {
   display: inline-block;
   padding: 10px 25px;
-  /* background: #e63946; */
-  /* color: #fff; */
   color: #000;
   border-radius: 25px;
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-    font-size: 21px;
-
+  font-size: 21px;
 }
+
 .view-more:hover {
   background: #fff;
 }
 
-
-/* .view-more {
-  font-size: 14px;
-  color: black;
-  text-decoration: none;
-}
-
-.view-more:hover {
-  text-decoration: underline;
-} */
-
 /* Contact Section */
 .contact-section {
-  background: #ffeaea;
   border-radius: 12px;
   padding: 40px;
   max-width: 1195px;
-
-  /* max-width: 1100px; */
   margin: 15px auto;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -721,6 +638,10 @@ header .container {
   .kalakaar-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+
+  .view-more-wrapper {
+    padding-right: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -744,16 +665,25 @@ header .container {
   .text-section h2 {
     font-size: 1.8rem;
   }
-
   .artist-cards {
-    flex-direction: column;
-    height: auto;
+    height: 280px; /* Reduced height */
   }
 
   .artist-card {
-    max-width: 300px;
-    /* margin: 0 auto; */
-    margin: 0px 61px;
+    width: 200px;
+    height: 300px;
+  }
+
+  .artist-card img {
+    height: 230px;
+  }
+
+  .artist-card h4 {
+    font-size: 16px;
+  }
+
+  .artist-card p {
+    font-size: 12px;
   }
 
   .talent-card-box {
@@ -779,6 +709,22 @@ header .container {
   .footer-social .social-icons {
     justify-content: center;
   }
+
+  .view-more-wrapper {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .text-section h2 {
+    font-size: 1.6rem;
+    margin-left: 20px;
+  }
+
+  .quote-left {
+    font-size: 28px;
+    top: -5px;
+    left: -5px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -787,8 +733,14 @@ header .container {
   }
 
   .text-section h2 {
-    font-size: 1.5rem;
-    margin-top: 15px;
+    font-size: 1.4rem;
+    margin-left: 15px;
+  }
+
+  .quote-left {
+    font-size: 24px;
+    top: -4px;
+    left: 0;
   }
 
   .talent-title {
@@ -808,29 +760,29 @@ header .container {
   .footer-social .social-icons a {
     font-size: 1.2rem;
   }
-}
-@media (max-width: 768px) {
-  .text-section h2 {
-    font-size: 1.6rem;   /* Smaller text on tablet/mobile */
-    margin-left: 20px;   /* Reduce left margin */
+  .artist-cards {
+    /* height: 220px; Further reduced for very small screens */
+        height: 269px;
+  }
+  .artist-card {
+    width: 180px;
+    height: 260px;
   }
 
-  .quote-left {
-    font-size: 28px;     /* Smaller quote size */
-    top: -5px;           /* Adjust positioning */
-    left: -5px;
-  }
-}
-
-@media (max-width: 480px) {
-  .text-section h2 {
-    font-size: 1.4rem;   /* Even smaller for mobile */
-    margin-left: 15px;   /* Minimal margin */
+  .artist-card img {
+    height: 200px;
   }
 
-  .quote-left {
-    font-size: 24px;     /* Smaller quote for narrow screens */
-    top: -4px;
-    left: 0;
+  .artist-card h4 {
+    font-size: 14px;
+  }
+
+  .artist-card p {
+    font-size: 11px;
+  }
+
+  .view-more {
+    font-size: 18px;
+    padding: 8px 20px;
   }
 }

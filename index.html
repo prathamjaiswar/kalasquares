@@ -5,46 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>KalaSquare</title>
+    <style>
+      /* Ensure extra cards are hidden by default */
+      .kalakaar-box.extra {
+        display: none;
+      }
+      .kalakaar-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+      }
+      .kalakaar-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      .kalakaar-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .kalakaar-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+      /* .view-more-wrapper {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .view-more {
+        background-color: #e63946;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 16px;
+      }
+      .view-more:hover {
+        background-color: #d32f2f;
+      } */
+    </style>
   </head>
-
   <body>
     <!-- Header -->
     <header>
       <div class="container">
-        <!-- Left Logo -->
         <div class="logo">
-          <img src="assets/logo.jpg" alt="KalaSquare Logo" />
+          <img src="assets/Kala Square.png" alt="KalaSquare Logo" />
         </div>
-
-        <!-- Right side controls -->
         <div class="header-right">
           <div class="search-box">
             <input type="text" placeholder="Search for 1500 celebs" />
             <i class="fas fa-search"></i>
           </div>
-          <button class="book-btn">Promote Your Business</button>
-          <a class="">Login/Sign In</a>
-
+          <button id="promoteBtn" class="book-btn">
+            Promote Your Business
+          </button>
           <button class="menu-btn"><i class="fas fa-bars"></i></button>
         </div>
       </div>
-
-      <!-- Mobile Menu -->
-      <!-- Mobile Menu -->
       <div class="mobile-menu" id="mobileMenu">
         <div class="location">
           Delhi-NCR <i class="fas fa-chevron-down"></i>
         </div>
-        <button class="book-btn">Sign In</button>
         <button class="book-btn">Promote Your Business</button>
       </div>
       <div
@@ -64,14 +103,13 @@
             padding: 5px 10px;
             border-radius: 5px;
           "
-          >Tap Here to Begin !</span
+          >Tap Here to Begin!</span
         >
       </div>
     </header>
 
     <section class="hero">
       <div class="hero-content">
-        <!-- Left Content -->
         <div class="text-section">
           <span class="quote-left">“</span>
           <h2>
@@ -80,30 +118,12 @@
             <span class="highlight">KalaSquare!</span>
             <span>”</span>
           </h2>
-
-          <!-- <h2>
-             <span>“</span>
-            Top artists, zero hassle – <br />
-            Book Your Artist with
-            <br />
-            <span class="highlight">KalaSquare!</span>”
-          </h2> -->
           <ul class="features">
             <li>10k+ Verified Artists – Top performers for every occasion.</li>
-            <li>
-              Hassle-Free Booking – Book your favorite artist in just a few
-              clicks.
-            </li>
-            <li>
-              Customizable Packages – Performances tailored to your event &
-              budget.
-            </li>
-            <li>
-              Instant Availability – See schedules & confirm artists instantly.
-            </li>
-            <li>
-              Verified Reviews & Ratings – Book confidently with real feedback.
-            </li>
+            <li>Hassle-Free Booking – Book your favorite artist in just a few clicks.</li>
+            <li>Customizable Packages – Performances tailored to your event & budget.</li>
+            <li>Instant Availability – See schedules & confirm artists instantly.</li>
+            <li>Verified Reviews & Ratings – Book confidently with real feedback.</li>
           </ul>
           <button
             style="
@@ -112,7 +132,7 @@
               padding: 10px 20px;
               border-radius: 20px;
               border: none;
-              font-size: 16px;
+              font-size: 12px;
               cursor: pointer;
               margin-top: 12px;
             "
@@ -120,29 +140,38 @@
             Talk To Us Now →
           </button>
         </div>
-
-        <!-- Right Side: Artist Cards -->
         <div class="artist-cards">
-          <div class="artist-card">
-            <!-- <img src="images/bobby.jpg" alt="Bobby Deol" /> -->
-            <img src="assets/sample.png" alt="Visual" />
-
-            <h4>dummy data</h4>
-            <p>dummy data</p>
-          </div>
-          <div class="artist-card">
-            <!-- <img src="images/bobby.jpg" alt="Bobby Deol" /> -->
-            <img src="assets/sample.png" alt="Visual" />
-
-            <h4>dummy data</h4>
-            <p>dummy data</p>
-          </div>
-          <div class="artist-card">
-            <!-- <img src="images/bobby.jpg" alt="dummy data" /> -->
-            <img src="assets/sample.png" alt="Visual" />
-
-            <h4>dummy data</h4>
-            <p>dummy data</p>
+          <div class="artist-slider">
+            <div class="artist-card">
+              <img src="assets/maincraousel1.jpg" alt="Visual" />
+              <h4>Artist Name 1</h4>
+              <p>Singer | Performer</p>
+            </div>
+            <div class="artist-card">
+              <img src="assets/maincraousel4.png" alt="Visual" />
+              <h4>Artist Name 2</h4>
+              <p>Dancer | Influencer</p>
+            </div>
+            <div class="artist-card">
+              <img src="assets/maincraousel3.jpg" alt="Visual" />
+              <h4>Artist Name 3</h4>
+              <p>Comedian | Actor</p>
+            </div>
+            <div class="artist-card">
+              <img src="assets/maincraousel1.jpg" alt="Visual" />
+              <h4>Artist Name 1</h4>
+              <p>Singer | Performer</p>
+            </div>
+            <div class="artist-card">
+              <img src="assets/maincraousel4.png" alt="Visual" />
+              <h4>Artist Name 2</h4>
+              <p>Dancer | Influencer</p>
+            </div>
+            <div class="artist-card">
+              <img src="assets/maincraousel3.jpg" alt="Visual" />
+              <h4>Artist Name 3</h4>
+              <p>Comedian | Actor</p>
+            </div>
           </div>
         </div>
       </div>
@@ -157,425 +186,33 @@
             padding: 10px 20px;
             border-radius: 20px;
             display: inline-block;
+            margin-top: 6px;
+            margin-bottom: 4px;
           "
         >
           Brands We Have Worked With
         </h3>
         <div class="brands-logos">
           <div class="logo-slider">
-            <img
-              src="assets/homa-page-brand-logo-1.png"
-              alt="ASTRAL"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-2.png"
-              alt="HealthifyMe"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-3.png"
-              alt="CIW"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-4.png"
-              alt="Daniel Wellington"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-5.png"
-              alt="PNG"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-6.png"
-              alt="BOROSIL"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-7.png"
-              alt="BBK"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-8.png"
-              alt="Schneider Electric"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-9.png"
-              alt="Flipkart"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-10.png"
-              alt="Merino"
-              style="margin: 10px; height: 60px"
-            />
-            <!-- <img
-              src="assets/homa-page-brand-logo-11.png"
-              alt="KOHL PIPES"
-              style="margin: 10px; height: 60px"
-            /> -->
-            <img
-              src="assets/homa-page-brand-logo-12.png"
-              alt="PVR"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-13.png"
-              alt="CARATLANE"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-14.png"
-              alt="Junglee Games"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-15.png"
-              alt="A23"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-16.png"
-              alt="Shadowfax"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-17.png"
-              alt="SATMOLA"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-18.png"
-              alt="unacademy"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-1.png"
-              alt="ImpactGuru"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-1.png"
-              alt="HOUSI"
-              style="margin: 10px; height: 60px"
-            />
-            <!-- Duplicate logos for seamless looping -->
-            <img
-              src="assets/homa-page-brand-logo-1.png"
-              alt="ASTRAL"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-2.png"
-              alt="HealthifyMe"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-3.png"
-              alt="CIW"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-4.png"
-              alt="Daniel Wellington"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-5.png"
-              alt="PNG"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-6.png"
-              alt="BOROSIL"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-7.png"
-              alt="BBK"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-8.png"
-              alt="Schneider Electric"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-9.png"
-              alt="Flipkart"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-10.png"
-              alt="Merino"
-              style="margin: 10px; height: 60px"
-            />
-            <!-- <img
-              src="assets/homa-page-brand-logo-11.png"
-              alt="KOHL PIPES"
-              style="margin: 10px; height: 60px"
-            /> -->
-            <img
-              src="assets/homa-page-brand-logo-12.png"
-              alt="PVR"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-13.png"
-              alt="CARATLANE"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-14.png"
-              alt="Junglee Games"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-15.png"
-              alt="A23"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-16.png"
-              alt="Shadowfax"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-17.png"
-              alt="SATMOLA"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-18.png"
-              alt="unacademy"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-1.png"
-              alt="ImpactGuru"
-              style="margin: 10px; height: 60px"
-            />
-            <img
-              src="assets/homa-page-brand-logo-1.png"
-              alt="HOUSI"
-              style="margin: 10px; height: 60px"
-            />
-          </div>
-          <div class="brands-section reverse-slider">
-            <div class="brands-logos">
-              <div class="logo-slider reverse">
-                <img
-                  src="assets/homa-page-brand-logo-1.png"
-                  alt="ASTRAL"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-2.png"
-                  alt="HealthifyMe"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-3.png"
-                  alt="CIW"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-4.png"
-                  alt="Daniel Wellington"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-5.png"
-                  alt="PNG"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-6.png"
-                  alt="BOROSIL"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-7.png"
-                  alt="BBK"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-8.png"
-                  alt="Schneider Electric"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-9.png"
-                  alt="Flipkart"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-10.png"
-                  alt="Merino"
-                  style="margin: 10px; height: 60px"
-                />
-                <!-- <img
-                  src="assets/homa-page-brand-logo-11.png"
-                  alt="KOHL PIPES"
-                  style="margin: 10px; height: 60px"
-                /> -->
-                <img
-                  src="assets/homa-page-brand-logo-12.png"
-                  alt="PVR"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-13.png"
-                  alt="CARATLANE"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-14.png"
-                  alt="Junglee Games"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-15.png"
-                  alt="A23"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-16.png"
-                  alt="Shadowfax"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-17.png"
-                  alt="SATMOLA"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-18.png"
-                  alt="unacademy"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-1.png"
-                  alt="ImpactGuru"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-1.png"
-                  alt="HOUSI"
-                  style="margin: 10px; height: 60px"
-                />
-                <!-- Duplicate logos for seamless looping -->
-                <img
-                  src="assets/homa-page-brand-logo-1.png"
-                  alt="ASTRAL"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-2.png"
-                  alt="HealthifyMe"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-3.png"
-                  alt="CIW"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-4.png"
-                  alt="Daniel Wellington"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-5.png"
-                  alt="PNG"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-6.png"
-                  alt="BOROSIL"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-7.png"
-                  alt="BBK"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-8.png"
-                  alt="Schneider Electric"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-9.png"
-                  alt="Flipkart"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-10.png"
-                  alt="Merino"
-                  style="margin: 10px; height: 60px"
-                />
-                <!-- <img
-                  src="assets/homa-page-brand-logo-11.png"
-                  alt="KOHL PIPES"
-                  style="margin: 10px; height: 60px"
-                /> -->
-                <img
-                  src="assets/homa-page-brand-logo-12.png"
-                  alt="PVR"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-13.png"
-                  alt="CARATLANE"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-14.png"
-                  alt="Junglee Games"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-15.png"
-                  alt="A23"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-16.png"
-                  alt="Shadowfax"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-17.png"
-                  alt="SATMOLA"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-18.png"
-                  alt="unacademy"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-1.png"
-                  alt="ImpactGuru"
-                  style="margin: 10px; height: 60px"
-                />
-                <img
-                  src="assets/homa-page-brand-logo-1.png"
-                  alt="HOUSI"
-                  style="margin: 10px; height: 60px"
-                />
-              </div>
-            </div>
+            <img src="assets/brand1.png" alt="ASTRAL" style="margin: 10px; height: 60px" />
+            <img src="assets/brand2.png" alt="HealthifyMe" style="margin: 10px; height: 60px" />
+            <img src="assets/brand3.png" alt="CIW" style="margin: 10px; height: 60px" />
+            <img src="assets/brand4.png" alt="Daniel Wellington" style="margin: 10px; height: 60px" />
+            <img src="assets/brand5.png" alt="PNG" style="margin: 10px; height: 60px" />
+            <img src="assets/brand6.png" alt="BOROSIL" style="margin: 10px; height: 60px" />
+            <img src="assets/brand7.png" alt="BBK" style="margin: 10px; height: 60px" />
+            <img src="assets/brand8.png" alt="Schneider Electric" style="margin: 10px; height: 60px" />
+            <img src="assets/brand1.png" alt="ASTRAL" style="margin: 10px; height: 60px" />
+            <img src="assets/brand2.png" alt="HealthifyMe" style="margin: 10px; height: 60px" />
+            <img src="assets/brand3.png" alt="CIW" style="margin: 10px; height: 60px" />
+            <img src="assets/brand4.png" alt="Daniel Wellington" style="margin: 10px; height: 60px" />
+            <img src="assets/brand5.png" alt="PNG" style="margin: 10px; height: 60px" />
+            <img src="assets/brand6.png" alt="BOROSIL" style="margin: 10px; height: 60px" />
+            <img src="assets/brand7.png" alt="BBK" style="margin: 10px; height: 60px" />
+            <img src="assets/brand8.png" alt="Schneider Electric" style="margin: 10px; height: 60px" />
           </div>
         </div>
       </div>
-
-      <!-- About KalaSquare -->
       <div class="about-section">
         <h3
           style="
@@ -584,6 +221,7 @@
             padding: 10px 20px;
             border-radius: 20px;
             display: inline-block;
+            margin-top: 25px;
           "
         >
           About KalaSquare
@@ -598,119 +236,14 @@
         </p>
       </div>
     </section>
-    <!-- <section class="brand-section">
-      <div class="slider-card">
-        <div class="slider">
-          <div class="slider-track">
-            <div class="slide">
-              <div class="slide-content">
-                <p class="slide-text">
-                  More than <strong>1000+ big brands</strong> trust
-                  <span>KalaSquare</span>
-                </p>
-                <img
-                  src="assets/logo.jpg"
-                  alt="Brand logo"
-                  class="slide-logo"
-                />
-              </div>
-            </div>
-
-            <div class="slide">
-              <div class="slide-content">
-                <p class="slide-text">
-                  More than <strong>1000+ big brands</strong> trust
-                  <span>KalaSquare</span>
-                </p>
-                <img
-                  src="assets/logo.jpg"
-                  alt="Brand logo"
-                  class="slide-logo"
-                />
-              </div>
-            </div>
-            <div class="slide">
-              <div class="slide-content">
-                <p class="slide-text">
-                  More than <strong>1000+ big brands</strong> trust
-                  <span>KalaSquare</span>
-                </p>
-                <img
-                  src="assets/logo.jpg"
-                  alt="Brand logo"
-                  class="slide-logo"
-                />
-              </div>
-            </div>
-            <div class="slide">
-              <div class="slide-content">
-                <p class="slide-text">
-                  More than <strong>1000+ big brands</strong> trust
-                  <span>KalaSquare</span>
-                </p>
-                <img
-                  src="assets/logo.jpg"
-                  alt="Brand logo"
-                  class="slide-logo"
-                />
-              </div>
-            </div>
-            <div class="slide">
-              <div class="slide-content">
-                <p class="slide-text">
-                  More than <strong>1000+ big brands</strong> trust
-                  <span>KalaSquare</span>
-                </p>
-                <img
-                  src="assets/logo.jpg"
-                  alt="Brand logo"
-                  class="slide-logo"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tagline-section">
-        <h3 class="tagline-title">
-          <span>Why Creators Choose</span>
-          <span class="highlight">KalaSquare 🚀</span>
-        </h3>
-        <ul class="features">
-          <li>
-            At <strong>KalaSquare</strong>, we don’t just manage talent — we
-            nurture it.
-          </li>
-          <li>
-            <strong>100% Transparency</strong> – Real-time access to campaigns,
-            deals, and earnings.
-          </li>
-          <li>
-            <strong>Bigger Opportunities</strong> – Collaborate with top brands
-            and projects tailored to your niche.
-          </li>
-          <li>
-            <strong>Personal Growth</strong> – Guidance, strategy, and support
-            to build your unique creator journey.
-          </li>
-          <li>
-            <strong>Stronger Community</strong> – Be part of a thriving network
-            of influencers, artists, and brands.
-          </li>
-        </ul>
-      </div>
-    </section> -->
 
     <section class="talent-section">
       <div class="talent-wrapper">
-        <!-- Left Card -->
         <div class="talent-card-box">
           <div class="talent-card">
             <img src="assets/Group-1171277241.png" alt="Visual" />
           </div>
         </div>
-
-        <!-- Right Content -->
         <div class="talent-info">
           <h2 class="talent-title">
             Transparent Email ID — You See Every Deal
@@ -719,18 +252,15 @@
             Every creator we manage gets a dedicated email ID
             (yourname@kalakaaar.com).
           </p>
-
           <div class="talent-divider"></div>
           <p class="talent-text">
             See every conversation with brands — from first pitch to final deal.
           </p>
-
           <div class="talent-divider"></div>
           <p class="talent-text">
             Know exactly how much is quoted, what brands are asking, and how
             we’re negotiating for you.
           </p>
-
           <div class="talent-divider"></div>
           <p class="talent-text">
             No more ‘secret deals’ — you’re part of every conversation.
@@ -738,7 +268,6 @@
         </div>
       </div>
       <div class="talent-wrapper">
-        <!-- Left Content -->
         <div class="talent-info">
           <h2 class="talent-title">
             Creator Dashboard — Your Career, Fully Visible
@@ -747,25 +276,20 @@
             With our exclusive dashboard, you get a real-time view of everything
             happening in your brand collab journey.
           </p>
-
           <div class="talent-divider"></div>
           <p class="talent-text">
             See all active, closed, and in-progress deals.
           </p>
-
           <div class="talent-divider"></div>
           <p class="talent-text">
             Track payments, invoices, and deal status anytime.
           </p>
-
           <div class="talent-divider"></div>
           <p class="talent-text">
             Monitor response times and how fast brands are moving on your
             collab.
           </p>
         </div>
-
-        <!-- Right Card -->
         <div class="talent-card-box">
           <div class="talent-card1">
             <img src="assets/Group-1171277241-1.png" alt="Visual" />
@@ -773,14 +297,11 @@
         </div>
       </div>
       <div class="talent-wrapper">
-        <!-- Left Card -->
         <div class="talent-card-box">
           <div class="talent-card" style="background-color: #ffcc00">
             <img src="assets/Group-1171277244.png" alt="Visual" />
           </div>
         </div>
-
-        <!-- Right Content -->
         <div class="talent-info">
           <h2 class="talent-title">
             Backed by Confluencr — 700+ Brand Network You Can Access
@@ -789,18 +310,15 @@
             Kalakaaar is powered by Confluencr, one of India’s largest
             influencer marketing agencies.
           </p>
-
           <div class="talent-divider"></div>
           <p class="talent-text">
             Get access to over 700+ brands already working with us.
           </p>
-
           <div class="talent-divider"></div>
           <p class="talent-text">
             Be part of our outbound pitching campaigns, brand email marketing,
             and PR pushes.
           </p>
-
           <div class="talent-divider"></div>
           <p class="talent-text">
             Tap into consistent, high-quality brand opportunities from day one.
@@ -836,7 +354,6 @@
             </div>
           </div>
         </div>
-
         <div class="kalakaar-box">
           <div class="kalakaar-card">
             <img src="assets/151.png" alt="Riaa Bally" />
@@ -848,7 +365,6 @@
             </div>
           </div>
         </div>
-
         <div class="kalakaar-box">
           <div class="kalakaar-card">
             <img src="assets/151.png" alt="Riaa Bally" />
@@ -860,7 +376,6 @@
             </div>
           </div>
         </div>
-
         <div class="kalakaar-box">
           <div class="kalakaar-card">
             <img src="assets/151.png" alt="Riaa Bally" />
@@ -872,8 +387,6 @@
             </div>
           </div>
         </div>
-
-        <!-- 5-8: hidden initially via class "extra" -->
         <div class="kalakaar-box extra">
           <div class="kalakaar-card">
             <img src="assets/151.png" alt="Riaa Bally" />
@@ -885,7 +398,6 @@
             </div>
           </div>
         </div>
-
         <div class="kalakaar-box extra">
           <div class="kalakaar-card">
             <img src="assets/151.png" alt="Riaa Bally" />
@@ -897,7 +409,6 @@
             </div>
           </div>
         </div>
-
         <div class="kalakaar-box extra">
           <div class="kalakaar-card">
             <img src="assets/151.png" alt="Riaa Bally" />
@@ -909,7 +420,6 @@
             </div>
           </div>
         </div>
-
         <div class="kalakaar-box extra">
           <div class="kalakaar-card">
             <img src="assets/151.png" alt="Riaa Bally" />
@@ -921,48 +431,37 @@
             </div>
           </div>
         </div>
-
-        <!-- <a href="#" class="view-more">View More</a> -->
-        <!-- 
-        <div class="view-more-wrapper">
-          <a id="view-more" class="view-more-link">View More</a>
-        </div> -->
       </div>
       <div class="view-more-wrapper">
         <a href="#" class="view-more">View More</a>
       </div>
     </section>
+
     <section class="featured-section">
       <div class="featured-container">
         <p style="font-weight: 600; color: black">Featured in:</p>
-        <img src="assets\news1.png" alt="SUNOVA" style="margin: 10px" />
-        <img src="assets\news2.png" alt="SUNOVA" style="margin: 10px" />
-        <img src="assets\news3.png" alt="SUNOVA" style="margin: 10px" />
-        <img src="assets\news4.png" alt="SUNOVA" style="margin: 10px" />
-        <a href="#" class="view-more">View More</a>
+        <img src="assets/news1.png" alt="SUNOVA" style="margin: 10px" />
+        <img src="assets/news2.png" alt="SUNOVA" style="margin: 10px" />
+        <img src="assets/news3.png" alt="SUNOVA" style="margin: 10px" />
+        <img src="assets/news4.png" alt="SUNOVA" style="margin: 10px" />
       </div>
     </section>
-    <section class="contact-section">
-      <div class="contact-container">
-        <!-- Left Form -->
 
+    <section class="contact-section" id="contactForm">
+      <div class="contact-container">
         <form class="contact-form" action="contact.php" method="POST">
           <h2>GET IN TOUCH</h2>
           <input type="text" placeholder="Your Name" />
           <input type="email" placeholder="Your Email" />
           <input type="text" placeholder="Your Phone" />
-
           <label>Are you representing <span style="color: red">*</span></label>
           <select>
             <option>Please select one</option>
             <option>Influencer</option>
             <option>Brand</option>
           </select>
-
           <button type="submit" class="btn">Next</button>
         </form>
-
-        <!-- Right Content -->
         <div class="contact-content">
           <h1>
             KalaSquare <br />
@@ -981,7 +480,6 @@
 
     <footer class="footer">
       <div class="footer-container">
-        <!-- Left Section: Information -->
         <div class="footer-info">
           <h3>Information</h3>
           <ul>
@@ -996,8 +494,6 @@
             <li>Talent Agencies</li>
           </ul>
         </div>
-
-        <!-- Center Section: Useful Links -->
         <div class="footer-links">
           <h3>Useful Links</h3>
           <ul>
@@ -1012,8 +508,6 @@
             <li><a href="#">Venues & Clubs</a></li>
           </ul>
         </div>
-
-        <!-- Center Section: Artist Testimonials -->
         <div class="footer-testimonials">
           <h3>Artist Testimonials</h3>
           <ul>
@@ -1024,8 +518,6 @@
             <li>Meody Square</li>
           </ul>
         </div>
-
-        <!-- Right Section: Follow Us On -->
         <div class="footer-social">
           <h3>Follow Us On</h3>
           <div class="social-icons">
@@ -1038,84 +530,54 @@
       </div>
     </footer>
 
-    <!-- <section class="contact-section">
-      <div class="contact-form">
-        <h2>GET IN TOUCH</h2>
-        <input type="text" placeholder="Your Name" />
-        <input type="email" placeholder="Your Email" />
-        <input type="text" placeholder="Your Phone" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Menu toggle
+        const menuBtn = document.querySelector(".menu-btn");
+        const mobileMenu = document.querySelector(".mobile-menu");
+        if (menuBtn && mobileMenu) {
+          menuBtn.addEventListener("click", function () {
+            mobileMenu.classList.toggle("active");
+          });
+        }
 
-        <label>Are you representing <span style="color: red">*</span></label>
-        <select>
-          <option>Please select one</option>
-          <option>Influencer</option>
-          <option>Brand</option>
-        </select>
+        // View More functionality for kalakaar section
+        const viewMoreBtn = document.querySelector(".view-more");
+        const extraCards = document.querySelectorAll(".kalakaar-box.extra");
+        let expanded = false;
 
-        <button class="btn">Next</button>
-      </div>
-      <div class="contact-content">
-        <h1>
-          KalaSquare <br /><span> – Connecting Talent with Opportunity!</span>
-        </h1>
+        if (viewMoreBtn && extraCards.length > 0) {
+          viewMoreBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            expanded = !expanded;
+            extraCards.forEach((card) => {
+              card.style.display = expanded ? "block" : "none";
+            });
+            viewMoreBtn.textContent = expanded ? "View Less" : "View More";
+          });
+        } else if (viewMoreBtn) {
+          viewMoreBtn.style.display = "none";
+        }
 
-        <p>
-          At KalaSquare, we believe in empowering artists, influencers, and
-          brands by creating meaningful collaborations. Whether you’re a rising
-          talent looking for representation or a brand seeking the perfect
-          influencer partnership, KalaSquare is your gateway to
-          growth and success.
-        </p>
-      </div>
-    </section> -->
+        // Promote Your Business button scroll
+        const promoteBtn = document.getElementById("promoteBtn");
+        if (promoteBtn) {
+          promoteBtn.addEventListener("click", function () {
+            document.getElementById("contactForm").scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+        }
+
+        // Optional: Add click event to artist cards for interactivity
+        const artistCards = document.querySelectorAll(".artist-card");
+        artistCards.forEach((card) => {
+          card.addEventListener("click", function () {
+            const artistName = card.querySelector("h4").textContent;
+            console.log(`Clicked on ${artistName}`);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuBtn = document.querySelector(".menu-btn");
-    const mobileMenu = document.querySelector(".mobile-menu");
-
-    menuBtn.addEventListener("click", function () {
-      mobileMenu.classList.toggle("active");
-    });
-
-    // View More functionality for kalakaar section
-    const viewMoreBtn = document.getElementById("view-more");
-    const extras = document.querySelectorAll(".kalakaar-box.extra");
-
-    if (viewMoreBtn && extras.length > 0) {
-      viewMoreBtn.addEventListener("click", function () {
-        const expanded = viewMoreBtn.getAttribute("aria-expanded") === "true";
-        extras.forEach((el) => {
-          el.classList.toggle("extra", expanded);
-        });
-        viewMoreBtn.textContent = expanded ? "View More" : "View Less";
-        viewMoreBtn.setAttribute("aria-expanded", (!expanded).toString());
-      });
-    } else if (viewMoreBtn) {
-      viewMoreBtn.style.display = "none";
-    }
-  });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const viewMoreBtn = document.querySelector(".view-more");
-    const extraCards = document.querySelectorAll(".kalakaar-box.extra");
-    let expanded = false;
-
-    viewMoreBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      expanded = !expanded;
-
-      extraCards.forEach((card) => {
-        card.style.display = expanded ? "block" : "none";
-      });
-
-      viewMoreBtn.textContent = expanded ? "View Less" : "View More";
-    });
-  });
-</script>
-
-<!-- <style>
-  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-</style> -->
