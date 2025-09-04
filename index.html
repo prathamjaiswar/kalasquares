@@ -56,27 +56,62 @@
         color: #000; /* Text color */
         font-size: 14px; /* Adjust font size as needed */
         line-height: 1.5; /* Ensure proper line spacing */
+        font-weight: 700;
       }
       .features li::before {
         content: "✔"; /* Checkmark symbol */
         position: absolute;
         left: 0;
         top: 0;
-        color: #fff; /* White checkmark to contrast with red circle */
+        color: #e63946; /* White checkmark to contrast with red circle */
         font-size: 14px; /* Size of the checkmark */
         font-weight: bold; /* Make it bold */
       }
-      .features li::after {
-        content: "";
-        position: absolute;
-        left: 0; /* Align circle with the start */
-        top: -2px; /* Adjust vertical alignment */
-        width: 12px; /* Size of the circle */
-        height: 12px; /* Size of the circle */
-        background-color: #e63946; /* Red circle */
-        border-radius: 50%; /* Make it a circle */
-        z-index: -1; /* Place behind the checkmark */
+      /* CSS */
+      .artist-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        width: 100%;
+        height: 341px;
       }
+      .artist-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures same size for all images */
+        border-radius: 10px;
+      }
+      .artist-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+      .artist-overlay h4,
+      .artist-overlay p {
+        margin: 5px 0;
+      }
+      .logo-slider .swiper-slide {
+        margin-right: 0 !important;
+      }
+      /* .features li::after {
+        top: 38%;
+        transform: translateY(-50%);
+        background: #e63946;
+        color: #fff;
+        font-size: 11px;
+        font-weight: bold;
+        width: 20px;
+        height: 14px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      } */
 
       /* .view-more-wrapper {
         text-align: center;
@@ -119,7 +154,7 @@
         </div>
         <button class="book-btn">Promote Your Business</button>
       </div>
-      <div
+      <!-- <div
         style="
           background-color: #e63946;
           color: #ffffff;
@@ -138,7 +173,7 @@
           "
           >Tap Here to Begin!</span
         >
-      </div>
+      </div> -->
     </header>
 
     <section class="hero">
@@ -147,26 +182,17 @@
           <span class="quote-left">“</span>
           <h2>
             Top artists, zero hassle – <br />
-            Book Your Artist with <br />
-            <span class="highlight">KalaSquare!</span>
+
+            Book Your Artist with <span class="highlight">KalaSquare!</span>
             <span>”</span>
           </h2>
+          <br />
           <ul class="features">
-            <li>10k+ Verified Artists – Top performers for every occasion.</li>
-            <li>
-              Hassle-Free Booking – Book your favorite artist in just a few
-              clicks.
-            </li>
-            <li>
-              Customizable Packages – Performances tailored to your event &
-              budget.
-            </li>
-            <li>
-              Instant Availability – See schedules & confirm artists instantly.
-            </li>
-            <li>
-              Verified Reviews & Ratings – Book confidently with real feedback.
-            </li>
+            <li>10k+ Verified Artists</li>
+            <li>Hassle-Free Booking</li>
+            <li>Customizable Packages</li>
+            <li>Instant Availability</li>
+            <li>Verified Reviews & Ratings</li>
           </ul>
           <button
             style="
@@ -183,37 +209,66 @@
             Talk To Us Now →
           </button>
         </div>
+
         <div class="artist-cards">
-          <div class="artist-slider">
-            <div class="artist-card">
-              <img src="assets/maincraousel1.jpg" alt="Visual" />
-              <h4>Artist Name 1</h4>
-              <p>Singer | Performer</p>
-            </div>
-            <div class="artist-card">
-              <img src="assets/maincraousel4.png" alt="Visual" />
-              <h4>Artist Name 2</h4>
-              <p>Dancer | Influencer</p>
-            </div>
-            <div class="artist-card">
-              <img src="assets/maincraousel3.jpg" alt="Visual" />
-              <h4>Artist Name 3</h4>
-              <p>Comedian | Actor</p>
-            </div>
-            <div class="artist-card">
-              <img src="assets/maincraousel1.jpg" alt="Visual" />
-              <h4>Artist Name 1</h4>
-              <p>Singer | Performer</p>
-            </div>
-            <div class="artist-card">
-              <img src="assets/maincraousel4.png" alt="Visual" />
-              <h4>Artist Name 2</h4>
-              <p>Dancer | Influencer</p>
-            </div>
-            <div class="artist-card">
-              <img src="assets/maincraousel3.jpg" alt="Visual" />
-              <h4>Artist Name 3</h4>
-              <p>Comedian | Actor</p>
+          <div class="swiper artist-swiper">
+            <div class="swiper-wrapper">
+              <!-- Artist Cards -->
+              <div class="swiper-slide">
+                <div class="artist-card">
+                  <img src="assets/maincraousel1.jpg" alt="Artist 1" />
+                  <div class="artist-overlay">
+                    <h4>Artist Name 1</h4>
+                    <p>Singer | Performer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="artist-card">
+                  <img src="assets/maincraousel4.png" alt="Artist 2" />
+                  <div class="artist-overlay">
+                    <h4>Artist Name 2</h4>
+                    <p>Dancer | Influencer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="artist-card">
+                  <img src="assets/maincraousel3.jpg" alt="Artist 3" />
+                  <div class="artist-overlay">
+                    <h4>Artist Name 3</h4>
+                    <p>Comedian | Actor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="artist-card">
+                  <img src="assets/maincraousel3.jpg" alt="Artist 3" />
+                  <div class="artist-overlay">
+                    <h4>Artist Name 3</h4>
+                    <p>Comedian | Actor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="artist-card">
+                  <img src="assets/maincraousel3.jpg" alt="Artist 3" />
+                  <div class="artist-overlay">
+                    <h4>Artist Name 3</h4>
+                    <p>Comedian | Actor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="artist-card">
+                  <img src="assets/maincraousel3.jpg" alt="Artist 3" />
+                  <div class="artist-overlay">
+                    <h4>Artist Name 3</h4>
+                    <p>Comedian | Actor</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Add more artist cards here -->
             </div>
           </div>
         </div>
@@ -325,10 +380,10 @@
           style="
             background-color: #e63946;
             color: #ffffff;
-            padding: 10px 20px;
-            border-radius: 20px;
+            padding: 10px 4px;
+            border-radius: 5px;
             display: inline-block;
-            margin-top: 6px;
+            margin-top: 25px;
             margin-bottom: 4px;
           "
         >
@@ -341,56 +396,44 @@
                 <img
                   src="assets/brand1.png"
                   alt="ASTRAL"
-                  style="margin: 10px; height: 60px"
+                  style="height: 60px"
                 />
               </div>
               <div class="swiper-slide">
                 <img
                   src="assets/brand2.png"
                   alt="HealthifyMe"
-                  style="margin: 10px; height: 60px"
+                  style="height: 60px"
                 />
               </div>
               <div class="swiper-slide">
-                <img
-                  src="assets/brand3.png"
-                  alt="CIW"
-                  style="margin: 10px; height: 60px"
-                />
+                <img src="assets/brand3.png" alt="CIW" style="height: 60px" />
               </div>
               <div class="swiper-slide">
                 <img
                   src="assets/brand4.png"
                   alt="Daniel Wellington"
-                  style="margin: 10px; height: 60px"
+                  style="height: 60px"
                 />
               </div>
               <div class="swiper-slide">
-                <img
-                  src="assets/brand5.png"
-                  alt="PNG"
-                  style="margin: 10px; height: 60px"
-                />
+                <img src="assets/brand5.png" alt="PNG" style="height: 60px" />
               </div>
               <div class="swiper-slide">
                 <img
                   src="assets/brand6.png"
                   alt="BOROSIL"
-                  style="margin: 10px; height: 60px"
+                  style="height: 60px"
                 />
               </div>
               <div class="swiper-slide">
-                <img
-                  src="assets/brand7.png"
-                  alt="BBK"
-                  style="margin: 10px; height: 60px"
-                />
+                <img src="assets/brand7.png" alt="BBK" style="height: 60px" />
               </div>
               <div class="swiper-slide">
                 <img
                   src="assets/brand8.png"
                   alt="Schneider Electric"
-                  style="margin: 10px; height: 60px"
+                  style="height: 60px"
                 />
               </div>
               <!-- Duplicated logos for continuous sliding effect -->
@@ -398,56 +441,44 @@
                 <img
                   src="assets/brand1.png"
                   alt="ASTRAL"
-                  style="margin: 10px; height: 60px"
+                  style="height: 60px"
                 />
               </div>
               <div class="swiper-slide">
                 <img
                   src="assets/brand2.png"
                   alt="HealthifyMe"
-                  style="margin: 10px; height: 60px"
+                  style="height: 60px"
                 />
               </div>
               <div class="swiper-slide">
-                <img
-                  src="assets/brand3.png"
-                  alt="CIW"
-                  style="margin: 10px; height: 60px"
-                />
+                <img src="assets/brand3.png" alt="CIW" style="height: 60px" />
               </div>
               <div class="swiper-slide">
                 <img
                   src="assets/brand4.png"
                   alt="Daniel Wellington"
-                  style="margin: 10px; height: 60px"
+                  style="height: 60px"
                 />
               </div>
               <div class="swiper-slide">
-                <img
-                  src="assets/brand5.png"
-                  alt="PNG"
-                  style="margin: 10px; height: 60px"
-                />
+                <img src="assets/brand5.png" alt="PNG" style="height: 60px" />
               </div>
               <div class="swiper-slide">
                 <img
                   src="assets/brand6.png"
                   alt="BOROSIL"
-                  style="margin: 10px; height: 60px"
+                  style="height: 60px"
                 />
               </div>
               <div class="swiper-slide">
-                <img
-                  src="assets/brand7.png"
-                  alt="BBK"
-                  style="margin: 10px; height: 60px"
-                />
+                <img src="assets/brand7.png" alt="BBK" style="height: 60px" />
               </div>
               <div class="swiper-slide">
                 <img
                   src="assets/brand8.png"
                   alt="Schneider Electric"
-                  style="margin: 10px; height: 60px"
+                  style="height: 60px"
                 />
               </div>
             </div>
@@ -459,10 +490,10 @@
           style="
             background-color: #e63946;
             color: #ffffff;
-            padding: 10px 20px;
-            border-radius: 20px;
+            padding: 10px 4px;
+            border-radius: 5px;
             display: inline-block;
-            margin-top: 25px;
+            margin-top: 17px;
           "
         >
           About KalaSquare
@@ -574,8 +605,8 @@
           style="
             background-color: #e63946;
             color: #ffffff;
-            padding: 10px 20px;
-            border-radius: 20px;
+            padding: 10px 5px;
+            border-radius: 5px;
             display: inline-block;
             align-items: center;
           "
@@ -812,9 +843,9 @@
         // Initialize Swiper for brand logos
         const brandSwiper = new Swiper(".logo-slider", {
           slidesPerView: 5,
-          spaceBetween: 20,
+          spaceBetween: 0,
           loop: true,
-          speed: 2000, // Increase the sliding speed (transition duration)
+          speed: 50000, // Increase the sliding speed (transition duration)
           autoplay: {
             delay: 0, // Continuous sliding without pause
             disableOnInteraction: false,
@@ -828,7 +859,18 @@
             1024: { slidesPerView: 5, spaceBetween: 20 },
           },
         });
-
+        const artistSwiper = new Swiper(".artist-swiper", {
+          slidesPerView: 3, // Visible cards
+          spaceBetween: 20,
+          freeMode: true, // Allows natural dragging
+          grabCursor: true, // Shows grab cursor on hover
+          breakpoints: {
+            320: { slidesPerView: 1, spaceBetween: 10 },
+            480: { slidesPerView: 2, spaceBetween: 10 },
+            768: { slidesPerView: 3, spaceBetween: 15 },
+            1024: { slidesPerView: 3, spaceBetween: 20 },
+          },
+        });
         // Optional: Add click event to artist cards for interactivity
         const artistCards = document.querySelectorAll(".artist-card");
         artistCards.forEach((card) => {
