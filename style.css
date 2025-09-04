@@ -194,12 +194,12 @@ header .container {
   /* padding: 0; */
 }
 
-.features li {
+/* .features li {
   font-size: 16px;
   margin-bottom: 6px;
   position: relative;
   padding-left: 30px;
-}
+} */
 
 /* .features li::before {
   content: "✔";
