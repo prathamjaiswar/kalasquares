@@ -592,7 +592,9 @@ header .container {
     display: none;
   }
   .features li::before {
-    margin-left: 81px;
+    margin-left: 194px;
+
+    /* margin-left: 81px; */
   }
   .menu-btn {
     display: block; /* Show menu button */
@@ -607,9 +609,10 @@ header .container {
     text-align: center;
   }
 
-  .text-section h2 {
+  /* .text-section h2 {
     font-size: 1.8rem;
-  }
+
+  } */
   .artist-cards {
     /* height: 280px; Reduced height */
     height: 348px;
@@ -663,18 +666,20 @@ header .container {
 
   .text-section h2 {
     font-size: 1.6rem;
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    margin-left: 142px;
   }
 
   .quote-left {
     font-size: 28px;
     top: -5px;
-    left: -5px;
+    /* left: -5px; */
+            left: 189px;
+
   }
   .search-box {
     /* width: 150px; Reduce search box width on smaller screens */
-            width: 226px;
-
+    width: 226px;
   }
 
   .logo {
@@ -768,7 +773,7 @@ header .container {
     padding: 10px;
     text-align: center;
     margin: 27px;
-}
+  }
 
   .artist-card img {
     height: 200px;
