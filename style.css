@@ -592,7 +592,8 @@ header .container {
     display: none;
   }
   .features li::before {
-    margin-left: 194px;
+    /* margin-left: 194px; */
+    margin-left: 180px;
 
     /* margin-left: 81px; */
   }
@@ -674,8 +675,8 @@ header .container {
     font-size: 28px;
     top: -5px;
     /* left: -5px; */
-            left: 189px;
-
+    /* left: 189px; */
+    left: 175px;
   }
   .search-box {
     /* width: 150px; Reduce search box width on smaller screens */
@@ -790,5 +791,10 @@ header .container {
   .view-more {
     font-size: 18px;
     padding: 8px 20px;
+  }
+  .features li::before {
+    /* margin-left: 194px; */
+    margin-left: 80px;
+    /* margin-left: 81px; */
   }
 }
