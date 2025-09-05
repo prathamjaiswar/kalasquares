@@ -189,12 +189,10 @@ header .container {
 
 .features {
   list-style: none;
-     padding-left: 10px;
+  padding-left: 10px;
 
   /* padding: 0; */
 }
-
-
 
 .artist-cards {
   overflow: hidden;
@@ -593,9 +591,13 @@ header .container {
   .header-right a {
     display: none;
   }
-
+  .features li::before {
+    margin-left: 81px;
+  }
   .menu-btn {
-    display: block;
+    display: block; /* Show menu button */
+    margin-right: 10px; /* Adjust spacing */
+    font-size: 18px; /* Slightly smaller for better fit */
   }
 
   .hero-content,
@@ -610,7 +612,7 @@ header .container {
   }
   .artist-cards {
     /* height: 280px; Reduced height */
-            height: 348px;
+    height: 348px;
   }
 
   .artist-card {
@@ -669,13 +671,54 @@ header .container {
     top: -5px;
     left: -5px;
   }
+  .search-box {
+    /* width: 150px; Reduce search box width on smaller screens */
+            width: 226px;
+
+  }
+
+  .logo {
+    max-width: 150px; /* Reduce logo width on smaller screens */
+    margin-left: 30px;
+  }
+  header .container {
+    justify-content: space-between; /* Ensure proper spacing */
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
 }
 
 @media (max-width: 480px) {
   .search-box input[type="text"] {
     width: 150px;
   }
+  .search-box {
+    width: 150px;
+    margin-left: 49px;
 
+    /* Further reduce search box width for very small screens */
+  }
+
+  .menu-btn {
+    display: block; /* Ensure menu button is visible */
+    font-size: 16px; /* Smaller size for very small screens */
+    margin-right: 8px; /* Adjust spacing */
+  }
+  .logo {
+    max-width: 120px; /* Further reduce logo width */
+    margin-left: 10px; /* Adjust margin */
+  }
+  .search-box input[type="text"] {
+    font-size: 14px; /* Slightly smaller font for small screens */
+    padding: 6px 8px 6px 30px; /* Adjust padding */
+  }
+  .search-box .fas {
+    left: 8px; /* Adjust icon position */
+    font-size: 14px; /* Smaller icon */
+  }
+
+  header .container {
+    padding: 0 8px; /* Further reduce padding */
+  }
   .text-section h2 {
     font-size: 1.4rem;
     margin-left: 15px;
@@ -707,13 +750,25 @@ header .container {
   .artist-cards {
     /* height: 220px; Further reduced for very small screens */
     /* height: 269px; */
-            height: 348px;
-
+    height: 348px;
   }
   .artist-card {
-    width: 180px;
-    height: 260px;
+    /* width: 180px;
+    height: 260px; */
+    height: 378px;
+    padding: 28px;
   }
+  .artist-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin: 27px;
+}
 
   .artist-card img {
     height: 200px;
